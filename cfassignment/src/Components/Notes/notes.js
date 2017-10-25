@@ -25,9 +25,10 @@ class Note extends Component{
         super(props)
     }
     render(){
-        var taskList = this.props.tasks.map(function(task,index) {
+        const data = this.props.tasks
+        const taskList = Object.keys(data).map((task,index)=>{
             return( <div style={styles}>
-                <p style={taskStyle} key={index}>{task.tasks}</p>
+                <p style={taskStyle} key={index}>{task}</p>
                 <FaTrashO style={trashStyle}/>
             </div>)
         })

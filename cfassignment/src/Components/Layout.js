@@ -35,11 +35,10 @@ class Layout extends Component{
     componentDidMount(){
         axios.get("http://cfassignment.herokuapp.com/nivethida/tasks")
             .then(result => {
-                console.log(result.data)
                 this.setState({
                     tasks: result.data.tasks
                 })
-            }).bind(this)
+            })
     }
     render(){
         return(
