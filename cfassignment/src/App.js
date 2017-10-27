@@ -8,7 +8,7 @@ const Bar = styled.div`
     width:100%;
     margin: 0;
     height:60px;
-    background: #1c2331;
+    background: #29293d;
     `;
 class App extends Component {
     render() {

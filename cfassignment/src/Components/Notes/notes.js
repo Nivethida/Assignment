@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import FaTrashO from 'react-icons/lib/fa/trash-o'
 const styles = {
-    height: "100px",
+    height: "120px",
     border: "none",
     borderColor: "#E8E8E8",
     borderBottomStyle: "solid",
@@ -10,27 +10,36 @@ const styles = {
 const taskStyle = {
     paddingLeft: "10px",
     paddingTop: "10px",
-    color: "grey"
+    color: "grey",
+    border: "none",
+    outline: "none",
+    fontSize: "15px",
+    resize: "none",
+    width: "80%",
+    height: "80%"
 }
 const trashStyle = {
     position: "absolute",
-    top: "30px",
+    marginTop: "20px",
     right: "10px",
     color: "grey"
 
 }
+
 class Note extends Component{
 
-    constructor(props){
-        super(props)
-    }
+
     render(){
-        const data = this.props.tasks
-        const taskList = Object.keys(data).map((task,index)=>{
-            return( <div style={styles}>
-                <p style={taskStyle} key={index}>{task}</p>
-                <FaTrashO style={trashStyle}/>
-            </div>)
+
+        console.log(this.props.tasks)
+
+        const taskList = this.props.tasks.map((data,index)=>{
+            return(
+                <div style={styles} key={index}>
+                <textarea style={taskStyle} defaultValue={data}>
+                </textarea>
+                    <FaTrashO style={trashStyle}/>
+                </div>)
         })
         return(
             <div>
