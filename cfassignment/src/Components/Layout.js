@@ -43,10 +43,6 @@ const noteStyle ={
     left: "18%"
 }
 
-
-
-
-
 class Layout extends Component{
     constructor(props){
         super(props)

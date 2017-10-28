@@ -7,6 +7,7 @@ const styles = {
     borderBottomStyle: "solid",
     backgroundColor: "white"
 }
+
 const taskStyle = {
     paddingLeft: "10px",
     paddingTop: "10px",
@@ -36,7 +37,8 @@ class Note extends Component{
         const taskList = this.props.tasks.map((data,index)=>{
             return(
                 <div style={styles} key={index}>
-                <textarea style={taskStyle} defaultValue={data}>
+                <textarea style={taskStyle}>
+                    {data}
                 </textarea>
                     <FaTrashO style={trashStyle}/>
                 </div>)
