@@ -52,6 +52,7 @@ class Layout extends Component{
         }
         this.edit = this.edit.bind(this)
         this.saveTask = this.saveTask.bind(this)
+        this.handleTaskChange = this.handleTaskChange.bind(this)
     }
     saveTask(e){
 
@@ -77,6 +78,12 @@ class Layout extends Component{
 
     }
 
+    handleTaskChange(e){
+        console.log("State is changed")
+        this.setState({
+            tasks: e.target.value
+        })
+    }
 
     render(){
         return(
@@ -91,7 +98,7 @@ class Layout extends Component{
                 </Row>
                 <Row>
                 <div style={noteStyle}>
-                    <Note tasks={this.state.tasks}/>
+                    <Note tasks={this.state.tasks} onChange={this.handleTaskChange()} />
                 </div>
                 </Row>
             </div>
