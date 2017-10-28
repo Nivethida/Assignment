@@ -37,7 +37,7 @@ class Note extends Component{
         const taskList = this.props.tasks.map((data,index)=>{
             return(
                 <div style={styles} key={index}>
-                <textarea style={taskStyle}>
+                <textarea style={taskStyle} value={e.target.value}>
                     {data}
                 </textarea>
                     <FaTrashO style={trashStyle}/>
