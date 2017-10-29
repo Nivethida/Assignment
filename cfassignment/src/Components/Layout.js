@@ -3,7 +3,6 @@ import React, {Component} from 'react'
 import FaTrashO from 'react-icons/lib/fa/trash-o'
 import FaRefresh from 'react-icons/lib/fa/refresh'
 import axios from 'axios'
-import keyIndex from 'react-key-index';
 
 var _ = require('lodash');
 
