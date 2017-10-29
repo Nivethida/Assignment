@@ -37,7 +37,7 @@ class Note extends Component{
         const taskList = this.props.tasks.map((data,index)=>{
             return(
                 <div style={styles} key={index}>
-                <textarea style={taskStyle} defaultValue={data} onChange={this.props.handleTaskChange}>
+                <textarea style={taskStyle} defaultValue={data} onChange={this.props._onTaskChanged}>
                 </textarea>
                     <FaTrashO style={trashStyle}/>
                 </div>)
